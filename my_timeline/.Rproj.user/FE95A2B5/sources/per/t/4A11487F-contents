@@ -115,11 +115,13 @@ ggplot(., aes(year,row, fill = era)) +
   initial_text(x = 2017, y = -2.9, size = 5, label = "bioinformatics", colour = pallete[7]) +
   initial_text(x = 2020, y = -3.1, size = 5, label = "datascience", colour = pallete[7]) +
   initial_text(x = 2021.5, y = -2.9, size = 5, label = "#dataviz", colour = pallete[7]) +
-  initial_text(x = 2020, y = -3.3, size = 5, label = "#compbio", colour = pallete[7]) 
+  initial_text(x = 2020, y = -3.3, size = 5, label = "#compbio", colour = pallete[7]) +
+  initial_text(x = 2016, y = -3.5, size = 5, label = "biomarkers", colour = pallete[7])  +
+  initial_text(x = 2020, y = -3.5, size = 5, label = "therapy", colour = pallete[7]) 
 
 timeline
 
 # Export ----
 ggsave("../../camilafarias112.github.io/images/content/timeline.png", plot = timeline, device = "png", dpi = 300)
-ggsave("timeline.png", plot = timeline, device = "png", dpi = 300)
+ggsave("images/timeline.png", plot = timeline, device = "png", dpi = 300)
 
