@@ -13,6 +13,8 @@ randomtexts.txt
 # R files:
 .RData
 .Rhistory
-/Rproj.user
+*Rproj
+/.Rproj.user
+.DS_Store
 
 
