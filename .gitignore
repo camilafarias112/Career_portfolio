@@ -1,0 +1,18 @@
+# Folders:
+CV_rmarkdown/Certificates
+CV_rmarkdown/Specific
+CV_rmarkdown/fonts
+
+# Specifc files:
+*.pdf
+*.cls
+*.sty
+*.log
+randomtexts.txt
+
+# R files:
+.RData
+.Rhistory
+/Rproj.user
+
+
