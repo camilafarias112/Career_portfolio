@@ -33,13 +33,13 @@ tree <- readPNG("images/tree.png", native = TRUE)
 
 # Plot ----
 timeline <- my_data %>%
-  mutate(era = factor(era, levels = c("childhood","highschool","undergrad","masters","phd","postdoc"))) %>%
+  mutate(era = factor(era, levels = c("childhood","highschool","undergrad","masters","phd","postdoc","ra"))) %>%
   
   ## Row of years:
 ggplot(., aes(year,row, fill = era)) + 
   geom_waffle(size = 0.3) + 
   #coord_equal() + 
-  scale_fill_manual(values = pallete) + 
+  scale_fill_manual(values = c(pallete,"#8B140C")) + 
   theme_classic() +
   theme(
     legend.position = "none",
@@ -51,7 +51,7 @@ ggplot(., aes(year,row, fill = era)) +
   
   ## Annotations guide:
   initial_text(x = 1989, y = 0.7, size = 4, label = "1990", colour = "#3B3B3B", angle = 90) +
-  initial_text(x = 2023, y = 0.7, size = 4, label = "2022", colour = "#3B3B3B", angle = 90) +
+  initial_text(x = 2024, y = 0.7, size = 4, label = "2023", colour = "#3B3B3B", angle = 90) +
   initial_text(x = 1990.5, y = 0.4, size = 5, label = "age", colour = "gray") +
   geom_segment(aes(x = 1991.5, xend = 1993, y = 0.38, yend = 0.38), arrow = arrow(length = unit(0.01, "npc")), colour = "gray") +
   
@@ -66,11 +66,11 @@ ggplot(., aes(year,row, fill = era)) +
   geom_segment(aes(x = 2016.2, xend = 2016.2, y = 1.6, yend = 1.8), colour = "gray") +
   
   ### Philadelphia
-  initial_text(x = 2019.5, y = 1.7, size = 5, label = "Philly/USA", colour = "gray") +
-  geom_segment(aes(x = 2016.7, xend = 2017.5, y = 1.7, yend = 1.7), colour = "gray") + # long
+  initial_text(x = 2020, y = 1.7, size = 5, label = "Philly/USA", colour = "gray") +
+  geom_segment(aes(x = 2016.7, xend = 2018, y = 1.7, yend = 1.7), colour = "gray") + # long
   geom_segment(aes(x = 2016.7, xend = 2016.7, y = 1.6, yend = 1.8), colour = "gray") +
-  geom_segment(aes(x = 2021.5, xend = 2022.2, y = 1.7, yend = 1.7), colour = "gray") + # long
-  geom_segment(aes(x = 2022.2, xend = 2022.2, y = 1.6, yend = 1.8), colour = "gray") +
+  geom_segment(aes(x = 2022, xend = 2023.2, y = 1.7, yend = 1.7), colour = "gray") + # long
+  geom_segment(aes(x = 2023.2, xend = 2023.2, y = 1.6, yend = 1.8), colour = "gray") +
 
   ## Annotations era:
   initial_text(x = 1998, y = 0.3, size = 5, label = "Childhood", colour = pallete[1]) +
@@ -89,16 +89,20 @@ ggplot(., aes(year,row, fill = era)) +
   geom_segment(aes(x = 2016.5, xend = 2016.5, y = -1.2, yend = -1.4), colour = "dark gray") +
 
 ### fellow postdoc:
-  geom_curve(aes(x = 2018, xend = 2017, y =2, yend = 1.4), arrow = arrow(length = unit(0.01, "npc")), colour = "#A979AF", curvature = 0.3) +
-  initial_text(x = 2021, y = 2.2, size = 6, label = "Ph.D fellow award\nData Science", colour = "#A979AF") +
+  geom_curve(aes(x = 2016, xend = 2017, y =2, yend = 1.5), arrow = arrow(length = unit(0.01, "npc")), colour = "#A979AF", curvature = -0.3) +
+  initial_text(x = 2012.5, y = 2.2, size = 6, label = "Ph.D fellow award\nData Science", colour = "#A979AF") +
   initial_text(x = 2020, y = 0, size = 6, label = "Postdoc\nComputional\nBiology", colour = pallete[6]) +
+  
+### Research Associate:
+  geom_curve(aes(x = 2023, xend = 2023, y =2, yend = 1.5), arrow = arrow(length = unit(0.01, "npc")), colour = "#8B140C", curvature = 0) +
+  initial_text(x = 2023, y = 2.3, size = 6, label = "Research\nAssociate", colour = "#8B140C") +
 
-### fellow postdoc:
+### DIYtranscriptomics:
   geom_curve(aes(x = 2016, xend = 2019, y =-0.5, yend = 0.7), colour = "#E88EB2", curvature = -0.6) +
   initial_text(x = 2020, y = -0.7, size = 5, label = "TA DIYtranscriptomics.com", colour = "#E88EB2") +
-  geom_segment(aes(x = 2019, xend = 2022, y = 0.7, yend = 0.7), colour = "#E88EB2") +
+  geom_segment(aes(x = 2019, xend = 2023, y = 0.7, yend = 0.7), colour = "#E88EB2") +
   geom_point(aes(x=2019, y=0.7),size=3, color="#E88EB2") +
-  geom_point(aes(x=2022, y=0.7),size=3, color="#E88EB2") +
+  geom_point(aes(x=2023, y=0.7),size=3, color="#E88EB2") +
 
 ### Additional perspective:
   initial_text(x = 2006, y = -2.5, size = 5, label = "Science life\nin keywords\n(start in 2009)", colour = "#3B3B3B") +
@@ -106,18 +110,20 @@ ggplot(., aes(year,row, fill = era)) +
   geom_segment(aes(x = 2009, xend = 2009, y = -2.4, yend = -2.6), colour = "#3B3B3B") +
   initial_text(x = 2013, y = -3.3, size = 5, label = "clinic", colour = pallete[7]) +
   initial_text(x = 2011, y = -2.7, size = 5, label = "immunology", colour = pallete[7]) +
-  initial_text(x = 2011, y = -3.1, size = 5, label = "wetlab", colour = pallete[7]) +
+  initial_text(x = 2011, y = -3.1, size = 5, label = "wetLab>dryLab", colour = pallete[7]) +
   initial_text(x = 2012, y = -2.9, size = 5, label = "HTLV-1", colour = pallete[7]) +
-  initial_text(x = 2015, y = -3.1, size = 5, label = "retrovirus", colour = pallete[7]) +
-  initial_text(x = 2016, y = -3.3, size = 5, label = "cellbiology", colour = pallete[7]) +
-  initial_text(x = 2015, y = -2.7, size = 5, label = "leishmania", colour = pallete[7]) +
-  initial_text(x = 2020, y = -2.7, size = 5, label = "parasites", colour = pallete[7]) +
+  initial_text(x = 2015.5, y = -3.1, size = 5, label = "retrovirus", colour = pallete[7]) +
+  initial_text(x = 2016, y = -3.3, size = 5, label = "cellBiology", colour = pallete[7]) +
+  initial_text(x = 2015, y = -2.7, size = 5, label = "skin", colour = pallete[7]) +
+  initial_text(x = 2018.5, y = -2.7, size = 5, label = "parasites", colour = pallete[7]) +
+  initial_text(x = 2022, y = -2.7, size = 5, label = "microbiome", colour = pallete[7]) +
   initial_text(x = 2017, y = -2.9, size = 5, label = "bioinformatics", colour = pallete[7]) +
   initial_text(x = 2020, y = -3.1, size = 5, label = "datascience", colour = pallete[7]) +
   initial_text(x = 2021.5, y = -2.9, size = 5, label = "#dataviz", colour = pallete[7]) +
   initial_text(x = 2020, y = -3.3, size = 5, label = "#compbio", colour = pallete[7]) +
-  initial_text(x = 2016, y = -3.5, size = 5, label = "biomarkers", colour = pallete[7])  +
-  initial_text(x = 2020, y = -3.5, size = 5, label = "therapy", colour = pallete[7]) 
+  initial_text(x = 2023, y = -3.3, size = 5, label = "patients", colour = pallete[7]) +
+  initial_text(x = 2016, y = -3.5, size = 5, label = "geneBiomarkers", colour = pallete[7])  +
+  initial_text(x = 2021, y = -3.5, size = 5, label = "immunotherapy", colour = pallete[7]) 
 
 timeline
 

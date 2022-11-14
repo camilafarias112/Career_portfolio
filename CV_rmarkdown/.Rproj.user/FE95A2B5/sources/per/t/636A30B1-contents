@@ -96,6 +96,7 @@ scholar::get_publications("6jg00_wAAAAJ") %>%
 ```{r}
 tribble(
   ~ award, ~ year,
+  "WHIP 2022 Travel Award Winner - by Woods Hole Immunoparasitology Group", "2022",
   "Ph.D fellow scholarship award to develop a scientific research project abroad - by Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES, Brazil)", "2017",
 ) %>%
   brief_entries(award, year)
@@ -103,11 +104,15 @@ tribble(
 
 # Invited and selected talks
 
+* *The skin microbiome enhances transcriptional inflammatory signatures and delays clinical resolution in cutaneous leishmaniasis*. 25th Annual Woods Hole Immunoparasitology Conference. Woods Hole, MA, USA, May 2022.
+
+* *Staphylococcus aureus contributes to cutaneous leishmaniasis pathology by stimulating neutrophil skin infiltration and enhancing pro-inflammatory gene expression*. 25th Annual Woods Hole Immunoparasitology Conference. Woods Hole, MA, USA, May 2021.
+
 * *Parasite load and host cytotoxicity-related gene expression are potential biomarkers for treatment outcome*. American Society of Tropical Medicine and Hygiene (ASTMH) Meeting. Maryland, USA. November 23, 2019.
 
 * *Predicting Treatment Failure in Cutaneous Leishmaniasis*. Tropical Medicine Research Center (TMRC) Meeting. Salvador, Bahia, Brazil. March 12, 2019.
 
-* *Predicting Treatment Failure in Cutaneous Leishmaniasis*. 22nd and 23th Annual Woods Hole Immunoparasitology Conference. Woods Hole, MA, USA, May 2018.
+* *Predicting Treatment Failure in Cutaneous Leishmaniasis*. 22nd and 23th Annual Woods Hole Immunoparasitology Conference. Woods Hole, MA, USA, May 2018, 2019.
 
 * *NK cells citotoxicity is impaired in HAM/TSP patients*. XII International Symposium of HTLV in Brazil and IV Paulista Symposium of HTLV. São Paulo, Brazil, 2016.
 
@@ -116,6 +121,13 @@ tribble(
 # PrePrint Reviews
 
 * *Links between environment, diet, and the hunter-gatherer microbiome*. 2018 **[\textcolor{red}{PREreview}](https://prereview.org/users/237518/articles/308580-prereview-journal-club-links-between-environment-diet-and-the-hunter-gatherer-microbiome)** 
+  
+  
+# Courses
+
+* *Probability and Statistical Inference*. Statistics and Modeling in Infectious Diseases. The 27th Summer Institute in Statistical Genetics. Biostatistics School of Public Health, University of Washington, Seattle, WA, USA, 2022. **[\textcolor{red}{link}](https://si.biostat.washington.edu/about/sismid/MD2201)** 
+  
+* *Infectious Diseases, Immunology and Within-Host Models*. Statistics and Modeling in Infectious Diseases. The 27th Summer Institute in Statistical Genetics. Biostatistics School of Public Health, University of Washington, Seattle, WA, USA, 2022. **[\textcolor{red}{link}](https://si.biostat.washington.edu/about/sismid/MD2212)**
 
 # Languages
 * Portuguese (native)
