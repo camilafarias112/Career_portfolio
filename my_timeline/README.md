@@ -1,4 +1,4 @@
-# My science timeline in a geom_waffle()
+# My science timeline in a geom_tile()
 
 This is a ggplot showing my timeline as a scientist. This image was inspired by [Isabella Benabaye](https://github.com/isabellabenabaye/life-chart/) and [Sharla Gelfand](https://github.com/sharlagelfand/mylifeinmonths)\!
 
