@@ -1,7 +1,5 @@
 # Folders:
-CV_rmarkdown/Certificates
-CV_rmarkdown/Specific
-CV_rmarkdown/fonts
+CV_rmarkdown
 
 # Specifc files:
 *.pdf
@@ -11,10 +9,10 @@ CV_rmarkdown/fonts
 randomtexts.txt
 
 # R files:
-.RData
-.Rhistory
+*.RData
+*.Rhistory
 *Rproj
 /.Rproj.user
-.DS_Store
+*.DS_Store
 
 

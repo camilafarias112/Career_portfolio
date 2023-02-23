@@ -6,3 +6,8 @@ View(scholar::get_publications("6jg00_wAAAAJ") %>%
     with = title,
     where = journal
   ))
+
+table <- get_publications("6jg00_wAAAAJ") %>%
+  arrange(desc(year))
+write_tsv(table %>%
+            select(title), "order_publications.txt")
