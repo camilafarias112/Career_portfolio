@@ -1,7 +1,7 @@
 # Folders:
 /CV_rmarkdown
+CV_rmarkdown
 
-# Specifc files:
 *.pdf
 *.cls
 *.sty
@@ -9,7 +9,6 @@
 *.docx
 randomtexts.txt
 
-# R files:
 *.RData
 *.Rhistory
 *Rproj
