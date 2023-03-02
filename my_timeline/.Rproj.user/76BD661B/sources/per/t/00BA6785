@@ -3,7 +3,7 @@
     "path": "~/Dropbox/Career_portfolio/my_timeline/mytimeline.R",
     "project_path": "mytimeline.R",
     "type": "r_source",
-    "hash": "536949946",
+    "hash": "1455946900",
     "contents": "",
     "dirty": false,
     "created": 1677086701034.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "103,0",
-        "scrollLine": "60"
+        "cursorPosition": "108,0",
+        "scrollLine": "85"
     },
     "folds": "",
-    "lastKnownWriteTime": 1677182890,
+    "lastKnownWriteTime": 1677629074,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1677182890571,
+    "last_content_update": 1677629074118,
     "read_only": false,
     "read_only_alternatives": []
 }

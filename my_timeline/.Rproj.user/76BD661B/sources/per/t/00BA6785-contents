@@ -38,6 +38,7 @@ initial_segment <- function(x, xend, y, yend, colour, ...) {
 tree <- readPNG("images/tree.png", native = TRUE)
 upenn <- readPNG("images/UPENN.png", native = TRUE)
 ufba <- readPNG("images/UFBA.png", native = TRUE)
+me <- readPNG("images/me.png", native = TRUE)
 
 # Plot ----
 timeline <- my_data %>%
@@ -51,7 +52,7 @@ ggplot(., aes(year,row, fill = era)) +
     axis.text = element_blank(),
     axis.ticks = element_blank(),
     axis.line = element_blank(),
-    plot.margin=unit(c(0,3,0,3),"cm"),
+    plot.margin=unit(c(0,3,0,5),"cm"),
     NULL) +
   coord_equal(clip = 'off', ratio=1, expand = FALSE) +
 
@@ -74,12 +75,12 @@ ggplot(., aes(year,row, fill = era)) +
   initial_text(x = 2.5, y = 1.9, size = 8, label = "B.S ", colour = pallete[1]) +
   initial_text(x = 5.5, y = 1.9, size = 8, label = "M.S", colour = pallete[2]) +
   initial_text(x = 8.5, y = 1.9, size = 8, label = "Ph.D", colour = pallete[3]) +
-  initial_text(x = 5.5, y = 4.2, size = 8, label = "Biomedicine, Biology, Immunology and\nHealth Sciences\n(wet-lab)", colour = pallete[6]) +
+  initial_text(x = 5.5, y = 4, size = 8, label = "Biomedicine, Biology, Immunology and\nHealth Sciences\n", colour = pallete[6]) +
   geom_segment(aes(x = 0.5, xend = 10.3, y = 3.1, yend = 3.1), colour = pallete[6], size=1.5) + # long
 
 ### fellow postdoc:
   #geom_curve(aes(x = 2016, xend = 2017, y =2, yend = 1.5), arrow = arrow(length = unit(0.01, "npc")), colour = "#A979AF", curvature = -0.3) +
-  initial_text(x = 13.5, y = 4.6, size = 8, label = "Bioinformatics\nData Science\nComputational Biology\n(dry-lab)", colour = pallete[6]) +
+  initial_text(x = 13.5, y = 4.3, size = 8, label = "Bioinformatics\nData Science\nComputational Biology\n", colour = pallete[6]) +
   initial_text(x = 13.5, y = 1.9, size = 8, label = "Postdoc", colour = pallete[4]) +
   geom_segment(aes(x = 10.7, xend = 16.2, y = 3.1, yend = 3.1), colour = pallete[6], size=1.5) +
   
@@ -95,10 +96,13 @@ ggplot(., aes(year,row, fill = era)) +
   
 ### Logos:
   annotation_raster(upenn, 13, 15, -3, -1.6) +
-  annotation_raster(ufba, 5, 7, -2.9, -1.8)
+  annotation_raster(ufba, 5, 7, -2.9, -1.8) +
+  annotation_raster(me, 1, 15.5, 11, 7)
 
-timeline
+#timeline
 
 # Export ----
-ggsave("images/timeline.png", plot = timeline, device = "png", dpi = 300)
-ggsave("../../camilafarias112.github.io/images/content/timeline.png", plot = timeline, device = "png", dpi = 300)
+ggsave("images/timeline.png", plot = timeline, device = "png", dpi = 300,
+       height = 35, width = 35, units = "cm")
+ggsave("../../camilafarias112.github.io/images/content/timeline.png", plot = timeline, device = "png", dpi = 300,
+       height = 35, width = 35, units = "cm")
